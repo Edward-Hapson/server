@@ -1,28 +1,28 @@
-// // import mongoose from "mongoose";
-// const mongoose = require('mongoose')
+// import mongoose from "mongoose";
+const mongoose = require('mongoose')
 
-// // let isconnected = false;
+// let isconnected = false;
 
-// const connectDB = async() =>{
-//     mongoose.set('strictQuery', true)
+const connectDB = async() =>{
+    mongoose.set('strictQuery', true)
 
-//     // if(isconnected){
-//     //     console.log('database already connected')
-//     //     return;
-//     // }
-//     try {
-//         await mongoose.connect('mongodb+srv://hapson:7iCTcZ5Xa7A2eMQ@spems.p0xp0gn.mongodb.net/',{
-//             dbName: 'SAPS',
-//             // useNewUrlParser: true,
-//             // useUnifiedTopology: true
-//         })
+    // if(isconnected){
+    //     console.log('database already connected')
+    //     return;
+    // }
+    try {
+        await mongoose.connect('mongodb://localhost:27017',{
+            dbName: 'SAPS',
+            // useNewUrlParser: true,
+            // useUnifiedTopology: true
+        })
 
-//         // isconnected = true
+        // isconnected = true
 
-//         console.log('database connected')
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
+        console.log('database connected')
+    } catch (error) {
+        console.log(error)
+    }
+}
 
-// module.exports = {connectDB}
+module.exports = {connectDB}
