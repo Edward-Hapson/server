@@ -3,7 +3,7 @@ const router = require('./routes/main');
 const { connectDB } = require('./utils/database');
 const app = express();
 
-connectDB();
+// connectDB();
 app.use('/api', router)
 // app.get('/api',(req,res)=>{
 //    res.json('hello, world') 
