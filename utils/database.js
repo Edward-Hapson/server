@@ -11,7 +11,7 @@ const connectDB = async() =>{
     //     return;
     // }
     try {
-        await mongoose.connect('mongodb://localhost:27017',{
+        await mongoose.connect('mongodb+srv://hapson:7iCTcZ5Xa7A2eMQ@spems.p0xp0gn.mongodb.net/',{
             dbName: 'SAPS',
             // useNewUrlParser: true,
             // useUnifiedTopology: true
