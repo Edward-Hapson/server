@@ -1,8 +1,9 @@
 const express = require('express')
-const router = require('./routes/main')
+const router = require('./routes/main');
+const { connectDB } = require('./utils/database');
 const app = express();
 
-
+connectDB();
 app.use('/api', router)
 // app.get('/api',(req,res)=>{
 //    res.json('hello, world') 
