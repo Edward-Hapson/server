@@ -1,8 +1,7 @@
-const express = require('express')
+const express = require('express');
+const { displayData } = require('../controllers/main');
  const router = express.Router();
 
- router.get('/', (req,res)=>{
-    res.json("hello, there")
- })
+ router.get('/', displayData)
 
  module.exports = router
