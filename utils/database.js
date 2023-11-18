@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 // let isconnected = false;
 
 const connectDB = async() =>{
-    mongoose.set('strictQuery', true)
+    // mongoose.set('strictQuery', true)
 
     // if(isconnected){
     //     console.log('database already connected')
@@ -12,7 +12,7 @@ const connectDB = async() =>{
     // }
     //hapson:7iCTcZ5Xa7A2eMQ
     try {
-        await mongoose.connect('mongodb+srv://hapson:7iCTcZ5Xa7A2eMQ@spems.p0xp0gn.mongodb.net/?retryWrites=true&w=majority',{
+        await mongoose.connect('mongodb://localhost:27017',{
             dbName: 'SAPS',
             // useNewUrlParser: true,
             // useUnifiedTopology: true
